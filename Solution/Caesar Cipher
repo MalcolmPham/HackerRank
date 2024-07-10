@@ -1,0 +1,50 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'caesarCipher' function below.
+#
+# The function is expected to return a STRING.
+# The function accepts following parameters:
+#  1. STRING s
+#  2. INTEGER k
+#
+
+def caesarCipher(s, k):
+    # Write your code here
+    ascii_values = [ord(char) for char in s]
+    
+    def shift_ascii(ascii_value, shift):
+        if 97 <= ascii_value <= 122:  
+            shifted = ((ascii_value - 97 + shift) % 26) + 97
+        elif 65 <= ascii_value <= 90:  
+            shifted = ((ascii_value - 65 + shift) % 26) + 65
+        else:  
+            shifted = ascii_value
+        return shifted
+    
+    k = k % 26 
+    shifted_ascii_values = [shift_ascii(value, k) for value in ascii_values]
+    
+    result = ''.join(chr(value) for value in shifted_ascii_values)
+    
+    return result
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input().strip())
+
+    s = input()
+
+    k = int(input().strip())
+
+    result = caesarCipher(s, k)
+
+    fptr.write(result + '\n')
+
+    fptr.close()
