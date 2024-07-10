@@ -1,3 +1,3 @@
 # HackerRank
 My HackerRank solutions
-1. [New Year Chaos](https://github.com/MalcolmPham/HackerRank/blob/main/New%20Year%20Chaos)
+1. [A Very Big Sum]([https://github.com/MalcolmPham/HackerRank/blob/main/New%20Year%20Chaos](https://github.com/MalcolmPham/HackerRank/blob/main/Solution/A%20Very%20Big%20Sum))
